@@ -89,8 +89,9 @@ class models:
         start=t.time()
         lr=LogisticRegression()
         model_lr=lr.fit(dat[0],dat[2])
+        pred=model_lr.predict(dat[1]); pred_prob=model_lr.predict_proba(dat[1])
         stop = t.time()
-        return model_lr, (stop-start)
+        return model_lr, (stop-start),pred, pred_prob
     def dtc(dat):
         #Decision Tree Classifier
         import time as t
@@ -98,40 +99,45 @@ class models:
         start=t.time()
         dtc=DecisionTreeClassifier()
         model_dtc=dtc.fit(dat[0],dat[2])
+        pred=model_dtc.predict(dat[1]); pred_prob=model_dtc.predict_proba(dat[1])
         stop = t.time()
-        return model_dtc, (stop-start)
+        return model_dtc, (stop-start),pred, pred_prob
     def rfc(dat):
         import time as t
         from sklearn.ensemble import RandomForestClassifier
         start=t.time()
         rfc=RandomForestClassifier()
         model_rfc = rfc.fit(dat[0],dat[2])
+        pred=model_rfc.predict(dat[1]); pred_prob=model_rfc.predict_proba(dat[1])
         stop = t.time()
-        return model_rfc, (stop-start)
+        return model_rfc, (stop-start),pred, pred_prob
     def knn(dat):
         import time as t
         from sklearn.neighbors import KNeighborsClassifier
         start=t.time()
         knn = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
         model_knn = knn.fit(dat[0],dat[2])
+        pred=model_knn.predict(dat[1]); pred_prob=model_knn.predict_proba(dat[1])
         stop = t.time()
-        return model_knn, (stop-start)
-    def svm_l(dat):
+        return model_knn, (stop-start),pred, pred_prob
+    def svc_l(dat):
         import time as t
         from sklearn.svm import SVC
         start=t.time()
         svc_l = SVC(kernel = 'linear', random_state = 0)
         model_svc_l = svc_l.fit(dat[0],dat[2])
+        pred=model_svc_l.predict(dat[1]); pred_prob=model_svc_l.predict_proba(dat[1])
         stop = t.time()
-        return model_svc_l, (stop-start)
-    def svm_r(dat):
+        return model_svc_l, (stop-start),pred, pred_prob
+    def svc_r(dat):
         import time as t
         from sklearn.svm import SVC
         start=t.time()
         svc_r = SVC(kernel = 'rbf', random_state = 0)
         model_svc_r = svc_r.fit(dat[0],dat[2])
+        pred=model_svc_r.predict(dat[1]); pred_prob=model_svc_r.predict_proba(dat[1])
         stop = t.time()
-        return model_svc_r, (stop-start)
+        return model_svc_r, (stop-start),pred, pred_prob
     def gnb(dat):
         import time as t
         from sklearn.naive_bayes import GaussianNB
@@ -141,3 +147,5 @@ class models:
         pred=model_gnb.predict(dat[1]); pred_prob=model_gnb.predict_proba(dat[1])
         stop = t.time()
         return model_gnb, (stop-start), pred, pred_prob
+    
+    
