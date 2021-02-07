@@ -14,7 +14,7 @@ def data_prep():
     y = df['diagnosis']
     #Splitting dataset into Train and Test Set
     from sklearn.model_selection import train_test_split
-    X_train, X_test,y_train, y_test=train_test_split(X,y,test_size=0.3,random_state=50)
+    X_train, X_test,y_train, y_test=train_test_split(X,y,test_size=0.3,random_state=40)
     #Feature Scaling using Standardization
     from sklearn.preprocessing import StandardScaler
     ss=StandardScaler()
