@@ -139,17 +139,54 @@ df_final = df.drop(drop_cols, axis=1)
 
 print(df_final.columns) # verify remaining columns
 
+
 final_corr_matrix = df_final.corr() #Correlation Matrix of final Dataframe
 
 # Mask for final Heatmap
 mask = np.zeros_like(final_corr_matrix, dtype = np.bool)
 mask[np.triu_indices_from(final_corr_matrix)] = True
 #
-fig, ax = plt.subplots(figsize=(22, 10))
+fig, ax = plt.subplots(figsize=(20, 10))
 ax = sns.heatmap(final_corr_matrix,mask=mask,annot=True,linewidths=0.5,fmt=".2f",cmap="YlGn");
 bottom, top = ax.get_ylim()
 ax.set_ylim(bottom + 0.5, top - 0.5);
-ax.set_title("Correlation Matrix Heatmap including all features")
+ax.set_title("Correlation Matrix Heatmap including Selected features", fontsize=20)
 
-#Saving final dataframe to csv file in dataset folder
-#df_final.to_csv("finaldata.csv", index=False)
+
+mean_corr_matrix = df_final.corr() #Correlation Matrix of mean Dataframe
+
+# Mask for Mean Heatmap
+mask = np.zeros_like(mean_corr_matrix, dtype = np.bool)
+mask[np.triu_indices_from(mean_corr_matrix)] = True
+#
+fig, ax = plt.subplots(figsize=(20, 10))
+ax = sns.heatmap(mean_corr_matrix,mask=mask,annot=True,linewidths=0.5,fmt=".2f",cmap="YlGn");
+bottom, top = ax.get_ylim()
+ax.set_ylim(bottom + 0.5, top - 0.5);
+ax.set_title("Correlation Matrix Heatmap including mean features", fontsize=20)
+
+
+se_corr_matrix = df_se.corr() #Correlation Matrix of se Dataframe
+
+# Mask for SE Heatmap
+mask = np.zeros_like(se_corr_matrix, dtype = np.bool)
+mask[np.triu_indices_from(se_corr_matrix)] = True
+#
+fig, ax = plt.subplots(figsize=(20, 10))
+ax = sns.heatmap(se_corr_matrix,mask=mask,annot=True,linewidths=0.5,fmt=".2f",cmap="YlGn");
+bottom, top = ax.get_ylim()
+ax.set_ylim(bottom + 0.5, top - 0.5);
+ax.set_title("Correlation Matrix Heatmap including se features", fontsize=20)
+
+
+worst_corr_matrix = df_worst.corr() #Correlation Matrix of worst Dataframe
+
+# Mask for Worst Heatmap
+mask = np.zeros_like(worst_corr_matrix, dtype = np.bool)
+mask[np.triu_indices_from(worst_corr_matrix)] = True
+#
+fig, ax = plt.subplots(figsize=(20, 10))
+ax = sns.heatmap(worst_corr_matrix,mask=mask,annot=True,linewidths=0.5,fmt=".2f",cmap="YlGn");
+bottom, top = ax.get_ylim()
+ax.set_ylim(bottom + 0.5, top - 0.5);
+ax.set_title("Correlation Matrix Heatmap including worst features", fontsize=20)
