@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import os
-from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
+from pathlib import Path
 #Now search for the dataset
 if os.path.exists("data.csv"):
     print('Dataset Found!')
@@ -190,3 +189,4 @@ ax = sns.heatmap(worst_corr_matrix,mask=mask,annot=True,linewidths=0.5,fmt=".2f"
 bottom, top = ax.get_ylim()
 ax.set_ylim(bottom + 0.5, top - 0.5);
 ax.set_title("Correlation Matrix Heatmap including worst features", fontsize=20)
+
