@@ -1,7 +1,7 @@
 # Comparative Analysis of Different Machine Learning Classification Algorithms for Breast Cancer Prediction
 ### In Dev!
 
-This is a Python- based implementation of Different Classification Algorithms on the task of Breast Cancer Prediciton using Machine Learning.
+This is a Python- based implementation of Different Classification Algorithms on the task of Breast Cancer Prediction using Machine Learning.
 ## About Dataset:
 Breast Cancer Wisconsin (Diagnostic) Data Set from [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
 
