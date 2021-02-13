@@ -92,7 +92,7 @@ class models:
         import time as t
         from sklearn.svm import SVC
         start=t.time()
-        svc_l = SVC(kernel = 'linear', random_state = 0)
+        svc_l = SVC(kernel = 'linear', random_state = 0,probability=True)
         model_svc_l = svc_l.fit(dat[0],dat[2])
         pred=model_svc_l.predict(dat[1]); pred_prob=model_svc_l.predict_proba(dat[1])
         stop = t.time()
@@ -101,7 +101,7 @@ class models:
         import time as t
         from sklearn.svm import SVC
         start=t.time()
-        svc_r = SVC(kernel = 'rbf', random_state = 0)
+        svc_r = SVC(kernel = 'rbf', random_state = 0,probability=True)
         model_svc_r = svc_r.fit(dat[0],dat[2])
         pred=model_svc_r.predict(dat[1]); pred_prob=model_svc_r.predict_proba(dat[1])
         stop = t.time()
