@@ -1,8 +1,9 @@
 def corrwithdia(dfx):
     import matplotlib.pyplot as plt
-    import seaborn as sns
     name = str([x for x in globals() if globals()[x] is dfx][0])
-    if name == 'df_mean':
+    if name == 'df':
+        x = "All"
+    elif name == 'df_mean':
         x = "Mean"
     elif name == 'df_se':
         x = "Squared Error"
