@@ -20,11 +20,17 @@ def X_y_split(df):
 def data_split_scale(X,y):
      #Splitting dataset into Train and Test Set
     from sklearn.model_selection import train_test_split
+    from src import sampling as s
     import pandas as pd
-    X_train, X_test,y_train, y_test=train_test_split(X,y,test_size=0.3,random_state=40)      
+    X_tr, X_test,y_tr, y_test=train_test_split(X,y,test_size=0.3,random_state=40)      
     #Feature Scaling using Standardization
     from sklearn.preprocessing import StandardScaler
     ss=StandardScaler()
-    X_train=ss.fit_transform(X_train)
-    X_test=ss.fit_transform(X_test)      
-    return pd.DataFrame(X_train), pd.DataFrame(X_test), y_train, y_test 
+    X_tr=ss.fit_transform(X_tr)
+    X_test=ss.fit_transform(X_test)     
+    print("'For 'Sampling strategies', I have 3 options. \n \t'1' stands for 'Upsampling'\n \t'2' stands for 'downsampling'. \n \t'3' stands for 'SMOTE''")
+    samp_sel=int(input("Now enter your selection for sampling strategy: \t"))
+    samp=[s.upsample, s.downsample, s.smote]
+    temp=samp[samp_sel-1]
+    X_train,y_train=temp(X_train=pd.DataFrame(X_tr), y_train=pd.DataFrame(y_tr))
+    return pd.DataFrame(X_train), X_test, pd.DataFrame(y_train), y_test 
