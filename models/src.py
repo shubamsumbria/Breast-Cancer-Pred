@@ -44,8 +44,8 @@ class feat:
     def feature():
         print("'\t The number '1' stands for 'ALL- FEATURES'. \n \t The number '2' stands for 'MEAN- FEATURES' . \n \t The number '3' stands for 'SQUARED- ERROR FEATURES'. \n \t The number '4' stands for 'WORST- FEATURES'. \n \t The number '5' stands for 'SELECTED- FEATURES'.'")
         selection=input("\t Enter your choice of feature selection: \t")
-        feat_options=[feat.feat1(), feat.feat2(), feat.feat3(), feat.feat4(), feat.feat5()]
-        return feat_options[int(selection) - 1]
+        feat_options=[feat.feat1, feat.feat2, feat.feat3, feat.feat4, feat.feat5]
+        return feat_options[int(selection) - 1]()
 
 class models:
     def lr(dat):
