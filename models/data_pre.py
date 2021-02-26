@@ -33,4 +33,4 @@ def data_split_scale(X,y):
     samp=[s.upsample, s.downsample, s.smote]
     temp=samp[samp_sel-1]
     X_train,y_train=temp(X_train=pd.DataFrame(X_tr), y_train=pd.DataFrame(y_tr))
-    return pd.DataFrame(X_train), X_test, pd.DataFrame(y_train), y_test 
+    return pd.DataFrame(X_train), pd.DataFrame(X_test), y_train, y_test 
