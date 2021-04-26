@@ -22,7 +22,7 @@ def data_split_scale(X,y):
     from sklearn.model_selection import train_test_split
     from src import sampling as s
     import pandas as pd
-    X_tr, X_test,y_tr, y_test=train_test_split(X,y,test_size=0.3,random_state=40)      
+    X_tr, X_test,y_tr, y_test=train_test_split(X,y,test_size=0.3)      
     #Feature Scaling using Standardization
     from sklearn.preprocessing import StandardScaler
     ss=StandardScaler()
