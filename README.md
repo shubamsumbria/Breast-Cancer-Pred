@@ -235,6 +235,8 @@ memory usage: 137.9 KB
 
 <a><img src="https://github.com/shubamsumbria66/Breast-Cancer-Pred/blob/main/graphs/11.png" width="720"/></a>
 
+Problem with having Multicollinearity [Link](https://www.analyticsvidhya.com/blog/2020/03/what-is-multicollinearity/#article-data:~:text=next.-,The%20Problem%20with%20having%20Multicollinearity,Multicollinearity%20may%20not%20affect%20the%20accuracy%20of%20the%20model%20as%20much.%20But%20we%20might%20lose%20reliability%20in%20determining%20the%20effects%20of%20individual%20features%20in%20your%20model%20%E2%80%93%20and%20that%20can%20be%20a%20problem%20when%20it%20comes%20to%20interpretability.)
+
 - **Observations:** We can verify multicollinearity between some variables. This is because the three columns essentially contain the same information, which is the physical size of the observation (the cell). Therefore, we should only pick one of the three columns when we go into further analysis.
 
 ### Things to remember while working with this dataset:
