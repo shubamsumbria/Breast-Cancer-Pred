@@ -1,7 +1,18 @@
 # Comparative Analysis of Different Machine Learning Classification Algorithms for Breast Cancer Prediction
-### In Dev!
 
 This is a Python- based implementation of Different Classification Algorithms on the task of Breast Cancer Prediction using Machine Learning.
+
+#### Language and Libraries
+
+<p>
+<a><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen" alt="Seaborn"/></a>
+ <a><img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit_learn"/></a>
+<a><img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Seaborn"/></a>
+<a><img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy"/></a>
+ <a><img src="https://matplotlib.org/_static/logo2_compressed.svg" alt="cplusplus" width="110"/></a>
+<a><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn"width="110"/></a>
+</p>
+
 ## About Dataset:
 Breast Cancer Wisconsin (Diagnostic) Data Set from [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
 
@@ -35,19 +46,6 @@ University of Wisconsin, 1210 West Dayton St., Madison, WI 53706
 olvi '@' cs.wisc.edu
 #### Donor:
 Nick Street
-
-### Libraries Used:
-
-<table>
-<tbody>
-<tr>
-<td><a><img src="https://pandas.pydata.org/docs/_static/pandas.svg" alt="Seaborn" align="center" width="75"/></a></td>
-<td><a><img src="https://matplotlib.org/_static/logo2_compressed.svg" alt="cplusplus" align="center" width="75"/></a></td>
-<td><a><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" align="center" width="75"/></a></td>
-<td> <a><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" align="center" width="75"/></a></td>
-</tr>
-</tbody>
-</table>
 
 ## Exploratory Data Analysis
 
